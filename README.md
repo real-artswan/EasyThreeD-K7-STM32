@@ -28,6 +28,7 @@ For additional files including compiled binaries, see https://github.com/schmttc
 ## Modified Files
 - Configuration_adv.h - SD_DETECT set to LOW (bugfix)
 - ini/stm32f1-maple.ini - Compile bugfix https://github.com/MarlinFirmware/Marlin/issues/25346
+- src\feature\easythreed_ui.cpp - Button code has been updated since mainline merge, but requires some re-work before the new code can be merged
 
 The files below are included in Marlin mainline from 2.0.9.3, and are listed for reference.
 - Configuration.h - configured for EasyThreeD K7
