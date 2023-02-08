@@ -9,14 +9,13 @@ The board's bootloader is proprietary by MKS, which reads a binary firmware file
 # Branch: 2.1.2
 This is a clone of Marlin 2.1.2, configured for the EasyThreeD K7 ET4000+, with some minor updates.
 
-For the original firmware source and binaries based on Marlin 1.1.1 supplied by the manufacturer, see https://github.com/schmttc/EasyThreeD-K7-STM32/tree/Original-Firmware-Marlin-1.1.1
-
-For additional files including compiled binaries, see https://github.com/schmttc/EasyThreeD-K7-STM32/tree/Additional-Files
+- For the original firmware source and binaries based on Marlin 1.1.1 supplied by the manufacturer, see https://github.com/schmttc/EasyThreeD-K7-STM32/tree/Original-Firmware-Marlin-1.1.1
+- For additional files related to the printer, see https://github.com/schmttc/EasyThreeD-K7-STM32/tree/Additional-Files
 
 ## Overview
 - Compile using PlatformIO, board "mks_robin_lite_maple" 
 - Physical buttons and LED currently are functional as per the standard manufacturer's behaviour
-- Start button LED (improved feedback)
+- Start button LED
   - LED blinks slowly when printing/processing
   - When paused blinks LED quickly
   - LED is on when job is cancelled or completed
@@ -28,7 +27,7 @@ For additional files including compiled binaries, see https://github.com/schmttc
 ## Modified Files
 - Configuration_adv.h - SD_DETECT set to LOW (bugfix)
 - ini/stm32f1-maple.ini - Compile bugfix https://github.com/MarlinFirmware/Marlin/issues/25346
-- src\feature\easythreed_ui.cpp - Button code has been updated since mainline merge, but requires some re-work before the new code can be merged
+- src\feature\easythreed_ui.cpp - Button code has been updated since mainline merge
 
 The files below are included in Marlin mainline from 2.0.9.3, and are listed for reference.
 - Configuration.h - configured for EasyThreeD K7
@@ -39,7 +38,7 @@ The files below are included in Marlin mainline from 2.0.9.3, and are listed for
 - src\feature\easythreed_ui.h - C header file
 
 ## Additional Files
-Compiled binary - (TBA)
+Compiled binary - mksLite.bin
 - Hotbed is enabled. If you do not have a hotbed, make sure the temp is set to 0 in your slicer
 - Backlash correction is disable, as there is currently a bug in this Marlin feature that causes layer shift
 - Input Shaping: Enabled, default 0 damping factor
