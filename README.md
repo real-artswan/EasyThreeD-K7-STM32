@@ -7,7 +7,7 @@ The K7 printer has been sold with a number of mainboards. My printer has the 32-
 The board's bootloader is proprietary by MKS, which reads a binary firmware file mksLite.bin from the SD card on boot. After a short time (<30s) the firmware is written to the board, and the files on the SD card renamed *.CUR.
 
 # Branch: 2.1.2
-This is a clone of Marlin 2.1.2, using the button functionality for the EasyThreeD K7/Nano that is now merged into Marlin mainline.
+This is a clone of Marlin 2.1.2, configured for the EasyThreeD K7 ET4000+, with some minor updates.
 
 For the original firmware source and binaries based on Marlin 1.1.1 supplied by the manufacturer, see https://github.com/schmttc/EasyThreeD-K7-STM32/tree/Original-Firmware-Marlin-1.1.1
 
@@ -41,7 +41,7 @@ The files below are included in Marlin mainline from 2.0.9.3, and are listed for
 ## Additional Files
 Compiled binary - (TBA)
 - Hotbed is enabled. If you do not have a hotbed, make sure the temp is set to 0 in your slicer
-- Backlash correction is enabled, with all settings on 0 by default. There is currently a bug in this Marlin feature that causes layer shift.
+- Backlash correction is disable, as there is currently a bug in this Marlin feature that causes layer shift
 - Input Shaping: Enabled, default 0 damping factor
 
 ## Notes on Marlin 2 Config
